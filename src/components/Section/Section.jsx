@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { SectionContainer } from './Section.styles';
+import React, { Component } from 'react';
 
-export const Section = {
+class Section extends Component {
   render() {
     const { title, children } = this.props;
 
@@ -11,9 +12,11 @@ export const Section = {
         {children}
       </SectionContainer>
     );
-  },
-};
+  }
+}
 
 Section.propTypes = {
   title: PropTypes.string,
 };
+
+export default Section;

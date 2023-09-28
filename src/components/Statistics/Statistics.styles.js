@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
-export const Feedback = styled.span`
-  color: rgba(5, 5, 5, 0.8);
-  line-height: 1.1;
-  font-size: 22px;
-  font-weight: 500;
+export const StatsContainer = styled.div`
+  margin: 0 auto;
+  gap: 10px;
 `;
-export const StatisticsList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+
+export const StatItem = styled.p`
+  font-size: 24px;
+  font-weight: bold;
+  color: #35abde;
+  &:hover {
+    color: #0c7fb0;
+  }
 `;
