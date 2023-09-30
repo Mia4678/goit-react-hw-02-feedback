@@ -17,8 +17,17 @@ export class App extends Component {
     }));
   };
 
+  // countTotalFeedback = () => {
+  //   return this.state.good + this.state.neutral + this.state.bad;
+  // };
+
   countTotalFeedback = () => {
-    return this.state.good + this.state.neutral + this.state.bad;
+    const valuesArray = Object.values(this.state);
+    const totalFeedback = valuesArray.reduce(
+      (total, value) => total + value,
+      0
+    );
+    return totalFeedback;
   };
 
   countPositiveFeedbackPercentage = () => {
